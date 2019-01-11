@@ -7,7 +7,7 @@ Attributions:
 
 ************************************* Work flow (last: 31Aug18) *************************************
 
-To note: This script has been written by and for PERLARA PBC to analyze plates coming off of the modularscience custom-built 384-well plate imager (meant for C. elegans). It provides a set of modules which (when more fully functionalized) can be ported to other high-throughput screening projects.
+To analyze plates from screening data. It provides a set of modules which (when more fully functionalized) can be ported to other high-throughput screening projects.
 
 Ensure file names are correct!!! 
 
