@@ -1,0 +1,52 @@
+def exlzn(csvs, lim):
+    ...:     l = float(lim)
+    ...:     for a in csvs:
+    ...:         a0 = pd.read_csv(a)
+    ...:         for i in range(len(a0['cond'])):
+    ...:             if a0['cond'][i] == '-ctrl':
+    ...:                 if abs(a0['zneg'][i]) > l:
+    ...:                     a0.drop(a0[i])
+    ...:                 else:
+    ...:                     pass
+    ...:             elif a0['cond'][i] == '+ctrl':
+    ...:                 if abs(a0['zpos'][i]) > l:
+    ...:                     a0.drop(a0[i])
+    ...:                 else:
+    ...:                     pass
+    ...:             else:
+    ...:                 pass
+    ...:         out = a.split('.')
+    ...:         a0.to_csv(os.path.join(out[0] + '_excl' + '.csv'), ind
+    ...: ex=False)
+    
+ Reversed:
+ 
+ gg = a.drop(48) 
+ 
+## correctly id's w/in range
+g = a.loc[(a['condt'] == '+ctrl') & (abs(a['zpos']) < 2)]
+h = a.loc[(a['condt'] == '-ctrl') & (abs(a['zneg']) < 2)]
+i = a.loc[(a['condt'] == 'exp')]
+incl = pd.concat([g, h, i])
+
+gg = a.loc[(a['condt'] == '+ctrl') & (abs(a['zpos']) < 2)]
+hh = a.loc[(a['condt'] == '-ctrl') & (abs(a['zneg']) < 2)]
+excl = pd.concat([gg, hh])
+ 
+ d = a.loc[a['well'] == 'C01']
+ 
+ for i in range(len(a['condt'])):                             
+     b = a['zpos'][i]   
+     if a['condt'][i] == '+ctrl':
+         if abs(float(b)) > 2:
+             print(a['well'][i])
+         else:
+             pass
+     else:
+         pass
+
+## could be used to create lists
+pos_ctrl = a['condt'] == '+ctrl'
+poutlier = abs(a['zpos']) > 2
+aa = a[pos_ctrl & poutlier]
+aa.to_csv()

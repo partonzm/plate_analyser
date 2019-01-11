@@ -1,0 +1,6 @@
+for m in lst:
+    ...:     for x in range(len(a['well'])):
+    ...:         hits.append(a.loc[(a['rep.'][x] == m) & (a['condt'][x] == 'exp'
+    ...: ) & (a['zneg'][x] > 2)])
+    ...:         print(hits)
+

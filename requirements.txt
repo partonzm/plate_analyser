@@ -1,0 +1,25 @@
+Linux Requirements (Ubuntu >16.04):
+
+sudo apt install python3-pip python3-numpy python3-scipy python3-matplotlib r-base-dev curl-dev libssl-dev libcurl4-gnutls-dev python3-rpy2
+
+pip3 install pandas matplotlib scipy numpy rpy2 tzlocal devtools --user
+
+R
+install.packages('dplyr')
+install.packages('ggplot2')
+install.packages('devtools')
+install.packages('plotly')
+install.packages('devtools')
+quit(save="no")
+
+link r libraries (may not be necc on all machines) :
+sudo ln -s /usr/lib/rstudio/bin/pandoc/pandoc /usr/local/bin
+sudo ln -s /usr/lib/rstudio/bin/pandoc/pandoc-citeproc /usr/local/bin
+
+Mac Requirements
+
+Windows Requirements
+
+
+
+---Updated as of 13Nov18---

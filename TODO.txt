@@ -1,0 +1,23 @@
+General Changes:
+    change ../final/all.csv to ...all_raw.csv
+    change name of html plots
+    migrate clnr code to df over csvs
+    annotate with original src file name
+    create .json for parameters (or ability to stop midway and continue)
+    create meta data listing all run parameters (zplim, znlim, zxlim, etc)
+    Change naming:
+        +/- ctrls need to go to pos_/neg_ for excel compat
+    Add zscores to final hit list
+
+Meta Data needs:    
+    #(may not do)remove date to meta data - need to create metadata and keep it        
+    org plate name csv
+    Metametrics
+        p value of control seperation
+        false positive rate
+        z' calculation
+        
+Build env
+#   Ubuntu
+    Windoze
+    Mc
